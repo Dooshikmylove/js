@@ -51,18 +51,30 @@ const dibujar=()=>{
   let ab=parseInt(anchob.value);
   let ra=parseInt(radio.value);
   let ro=parseInt(rotate.value);
-  let tra=parseInt(traslate.value);
-  let tray=parseInt(traslatey.value);
-  let sc=parseInt(scale.value);
-  let sx=parseInt(sombrax.value);
-  let sy=parseInt(sombray.value);
+  
   let tam=parseInt(tamaño.value);
 
+  let sc=parseInt(scale.value);
+  vscale.innerHTML=sc;
+
+  let sx=parseInt(sombrax.value);
+  let sy=parseInt(sombray.value);
+
+  let tra=parseInt(traslate.value);
+  vtraslate.innerHTML=tra;
+
+  let tray=parseInt(traslatey.value);
+  vtraslatey.innerHTML=tray;
+
+  a.style.transform=" translateX("+tra+"px) translateY("+tray+"px) scale("+sc+")";
+
+  let colors=cs.value;
+
+  a.style.boxShadow=sx+"px "+sy+"px "+tam+"px " + colors;
 
   let c1=colorf.value;
   let c2=colorb.value;
   let tipo=tipob.value;
-  let colors=cs.value;
 
 
   console.log("Ancho: ", an);
@@ -75,9 +87,6 @@ const dibujar=()=>{
   vanchob.innerHTML=ab;
   vradio.innerHTML=ra;
 vrotate.innerHTML=ro;
-vtraslate.innerHTML=tra;
-vtraslatey.innerHTML=tray;
-vscale.innerHTML=sc;
 vsx.innerHTML=sx;
 vsy.innerHTML=sy;
 
@@ -87,12 +96,7 @@ vsy.innerHTML=sy;
   a.style.borderWidth=ab+"px";
   a.style.borderRadius=ra+"px";
   a.style.rotate=ro+"deg";
-  a.style.translate=tra+"px";
-  a.style.transform="translateY"+tray+"px";
   a.style.scale=sc+"%";
-  a.style.boxShadowX=sx+"px";
-  a.style.boxShadowY=sy+"px";
-  a.style.boxShadow=tam+"px";
   a.style.backgroundColor=c1;
   a.style.borderColor=c2;
   a.style.borderStyle=tipo;
