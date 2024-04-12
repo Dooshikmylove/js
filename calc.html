@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="estilo.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="t">CALCULADORA</h1>
+
+    <div id="c">
+    <p>NUMERO 1</p>
+    <input type="number" id="num1" placeholder="Numero"><br>
+    <p>NUMERO 2</p>
+    <input type="number" id="num2" placeholder="Numero"><br>
+    <button value="Suma" onclick="suma()">+</button>
+    <button value="resta" onclick="resta()">-</button>
+    <button value="multi" onclick="mult()">*</button>
+    <button value="divi" onclick="divi()">/</button><br>
+    <button value="porc" onclick="porc()">%</button>
+    <button value="pote" onclick="pote()">**</button>
+    <button value="del" onclick="del()">DEL</button>
+    <div id="res"></div>
+</div>
+    <script src="app.js"></script>
+</body>
+</html>
